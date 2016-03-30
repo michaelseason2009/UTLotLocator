@@ -6,4 +6,9 @@
     android:orientation="vertical"
     android:background="@drawable/permitselector">
 
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"
+        android:prompt="@string/permit_selector"/>
 </LinearLayout>

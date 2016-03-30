@@ -1,5 +1,15 @@
 <resources>
     <string name="app_name">UT Lot Locater</string>
     <string name="action_settings">Settings</string>
-    <string name="title_activity_permitselector">permitselector</string>
+    <string name="permit_selector">Select Permit</string>
+    <string name="title_activity_permitselector">permit selector</string>
+    <string-array name="permit_array">
+        <item>C Permit</item>
+        <item>Permit</item>
+        <item>Permit</item>
+        <item>Permit</item>
+        <item>Permit</item>
+        <item>Permit</item>
+        <item>Permit</item>
+    </string-array>
 </resources>
