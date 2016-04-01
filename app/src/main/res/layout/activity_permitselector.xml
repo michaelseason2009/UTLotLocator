@@ -1,14 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:gravity="center_horizontal"
     android:orientation="vertical"
     android:background="@drawable/permitselector">
 
-    <Spinner
+<!--    <Spinner
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_alignParentLeft="true"
         android:id="@+id/spinner"
-        android:prompt="@string/permit_selector"/>
-</LinearLayout>
+        android:prompt="@string/permit_selector"
+        android:background="#ffffff"
+        android:spinnerMode="dropdown"
+        android:theme="@style/Base.Widget.AppCompat.DropDownItem.Spinner" />
+-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/selectortitle"
+        android:paddingTop="20dp"
+        android:paddingBottom="75dp"
+        android:src="@drawable/selectortitle"
+        />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/selectortitle"
+        android:background="@drawable/myborder"
+        android:id="@+id/radioGroup">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Select Permit"
+            android:id="@+id/textView" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New RadioButton"
+            android:id="@+id/radioButton2" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New RadioButton"
+            android:id="@+id/radioButton" />
+    </RadioGroup>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/selectortitle"
+        android:background="@drawable/myborder"
+        android:layout_marginLeft="30dp"
+        android:layout_toRightOf="@+id/radioGroup">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome to the UT Lot Locator! Please select your permit type and press GO!"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:id="@+id/textView2"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GO!"
+            android:id="@+id/button"
+            android:layout_below="@id/textView2"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>
