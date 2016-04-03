@@ -5,11 +5,15 @@
     <string name="title_activity_permitselector">permit selector</string>
     <string-array name="permit_array">
         <item>C Permit</item>
-        <item>Permit</item>
-        <item>Permit</item>
-        <item>Permit</item>
-        <item>Permit</item>
-        <item>Permit</item>
-        <item>Permit</item>
+        <item>C+ Permit</item>
+        <item>R Permit</item>
+        <item>S Permit</item>
+        <item>M Permit</item>
+        <item>N Permit</item>
+        <item>N+ Permit</item>
     </string-array>
+    <string name="title_activity_mapview">MapView</string>
+    <string name="goole_maps_key" templateMergeStrategy="preserve" translatable="false">
+        AIzaSyB7Z4b5LbZLFrCGhuUrqPtSqo_pnjORyDU
+    </string>
 </resources>

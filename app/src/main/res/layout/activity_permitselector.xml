@@ -42,16 +42,49 @@
             android:id="@+id/textView" />
 
         <RadioButton
+            android:checked="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New RadioButton"
-            android:id="@+id/radioButton2" />
+            android:text="C Permit"
+            android:id="@+id/C_permit" />
+
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New RadioButton"
-            android:id="@+id/radioButton" />
+            android:text="C+ Permit"
+            android:id="@+id/Cplus_permit" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R Permit"
+            android:id="@+id/R_Permit" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="S Permit"
+            android:id="@+id/S_permit" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="M Permit"
+            android:id="@+id/M_permit" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="N Permit"
+            android:id="@+id/N_permit" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="N+ Permit"
+            android:id="@+id/Nplus_permit" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="what"
+            android:id="@+id/testText" />
     </RadioGroup>
 
     <RelativeLayout
