@@ -76,14 +76,37 @@ public class mapview extends FragmentActivity implements OnMapReadyCallback, Goo
                 View v = getLayoutInflater().inflate(R.layout.custom_info_window, null);
 
                 ImageView pic = (ImageView) v.findViewById(R.id.infoImage);
+                TextView title = (TextView) v.findViewById(R.id.infoTitle);
 
-                switch (arg0.getTitle()) {
-                    case "Lot 70":
-                        pic.setImageResource(R.drawable.lot70);
-                        break;
-//                    case "Lot 37 Motorcycle Spots":
-//                        pic.setImageResource();
-//                        break;
+                String markerTitle = arg0.getTitle();
+
+                // Setting the custom info window's image and title
+                // One for each marker possibility (minus each marker copy
+                //                                  e.g. lot113 is used twice)
+                if (markerTitle.equals(getString(R.string.l70_title))) {
+                    pic.setImageResource(R.drawable.lot70);
+                    title.setText(R.string.l70_title);
+
+                } else if (markerTitle.equals(getString(R.string.l37m_title))) {
+                    pic.setImageResource(R.drawable.lot37m);
+                    title.setText(R.string.l37m_title);
+
+                } else if (markerTitle.equals(getString(R.string.l113_title))) {
+                    pic.setImageResource(R.drawable.lot113);
+                    title.setText(R.string.l113_title);
+
+                } else if (markerTitle.equals(getString(R.string.l37c_title))) {
+                    pic.setImageResource(R.drawable.lot37c);
+                    title.setText(R.string.l37c_title);
+
+                } else if (markerTitle.equals(getString(R.string.m21st_title))) {
+                    pic.setImageResource(R.drawable.m21st);
+                    title.setText(R.string.m21st_title);
+
+                } else if (markerTitle.equals(getString(R.string.l35_title))) {
+                    pic.setImageResource(R.drawable.lot35);
+                    title.setText(R.string.l35_title);
+
                 }
 
                 // Returning the view containing InfoWindow contents
@@ -96,42 +119,38 @@ public class mapview extends FragmentActivity implements OnMapReadyCallback, Goo
         switch (currentPermit) {
             case 1:
             case 2: // C and C+
-                LatLng lot70 = new LatLng(30.281352, -97.730823);
-                Marker mLot70 = mMap.addMarker(new MarkerOptions().position(lot70).title("Lot 70"));
-
-
+                LatLng lot70c = new LatLng(30.281352, -97.730823);
+                mMap.addMarker(new MarkerOptions().position(lot70c).title(getString(R.string.l70_title)));
+                LatLng lot113c = new LatLng(30.282140, -97.725518);
+                mMap.addMarker(new MarkerOptions().position(lot113c).title(getString(R.string.l113_title)));
+                LatLng lot37c = new LatLng(30.283916, -97.728252);
+                mMap.addMarker(new MarkerOptions().position(lot113c).title(getString(R.string.l37c_title)));
                 break;
 //            case 3:  // R
 //                break;
 //            case 4:  // S
-//                LatLng lot70 = new LatLng(30.281352, -97.730823);
-//                mMap.addMarker(new MarkerOptions().position(lot70).title("Lot 70"));
 //                break;
             case 5:  // M
                 LatLng lot37m = new LatLng(30.283475, -97.728240);
-                mMap.addMarker(new MarkerOptions().position(lot37m).title("Lot 37 Motorcycle Spots"));
-//                mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(lot37m, 15));
+                mMap.addMarker(new MarkerOptions().position(lot37m).title(getString(R.string.l37m_title)));
+                LatLng m21st = new LatLng(30.283606, -97.739193);
+                mMap.addMarker(new MarkerOptions().position(m21st).title(getString(R.string.m21st_title)));
                 break;
             case 6:
-            case 7:
+            case 7: // N and N+
                 LatLng lot113 = new LatLng(30.282140, -97.725518);
-                mMap.addMarker(new MarkerOptions().position(lot113).title("Lot 113"));
-//                mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(lot113, 15));
+                mMap.addMarker(new MarkerOptions().position(lot113).title(getString(R.string.l113_title)));
+                LatLng lot35 = new LatLng(30.282071, -97.727128);
+                mMap.addMarker(new MarkerOptions().position(lot35).title(getString(R.string.l35_title)));
                 break;
         }
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(CenterPt, 15));
-
-
-
-        // Add a marker in Sydney and move the camera
-//        LatLng sydney = new LatLng(-34, 151);
-//        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-//        mMap.moveCamera(CameraUpdateFactory.newLatLng(lot70));
+        // move camera to central point
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(CenterPt, 14));
     }
 
     @Override
     public void onInfoWindowClick(Marker marker){
-        Toast.makeText(mapview.this, "This is working!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(mapview.this, "Future location of lot info page", Toast.LENGTH_SHORT).show();
 
     }
 

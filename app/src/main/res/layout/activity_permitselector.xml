@@ -69,12 +69,7 @@
             android:layout_height="wrap_content"
             android:text="N+ Permit"
             android:id="@+id/Nplus_permit" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="what"
-            android:id="@+id/testText" />
+
     </RadioGroup>
 
     <RelativeLayout

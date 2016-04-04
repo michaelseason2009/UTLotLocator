@@ -18,17 +18,27 @@ import android.widget.Toast;
 
 public class permitselector extends AppCompatActivity {
 
-    public enum Permit {
-        C, Cplus, R, S, M, N, Nplus
-    }
+    // had trouble passing a custom type through intents
+    // so we switched to ints
+//    public enum Permit {
+//        C, Cplus, R, S, M, N, Nplus
+//    }
+    private static final int C_PERMIT = 1;
+    private static final int CPLUS_PERMIT = 2;
+    private static final int R_PERMIT = 3;
+    private static final int S_PERMIT = 4;
+    private static final int M_PERMIT = 5;
+    private static final int N_PERMIT = 6;
+    private static final int NPLUS_PERMIT = 7;
 
     private static final String TAG = "UTLotLocator";
 
     private RadioButton mC, mCplus, mR, mS, mM, mN, mNplus;
     private RadioButton mRadioButtonPermit;
     private RadioGroup mRadioGroupPermit;
-    private TextView mTestText;
+//    private TextView mTestText;
     private Button mButton;
+    // switched to ints for ease of use with intents
 //    private Permit permitType;
     private int permitType;
 
@@ -46,11 +56,11 @@ public class permitselector extends AppCompatActivity {
         mM = (RadioButton) findViewById(R.id.M_permit);
         mN = (RadioButton) findViewById(R.id.N_permit);
         mNplus = (RadioButton) findViewById(R.id.Nplus_permit);
-        mTestText = (TextView) findViewById(R.id.testText);
+//        mTestText = (TextView) findViewById(R.id.testText);
         mButton = (Button) findViewById(R.id.button);
 
         //set default permit type
-        permitType = 1;
+        permitType = C_PERMIT;  // C permit by default
 
         //testing for selection
         mRadioGroupPermit.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -59,25 +69,25 @@ public class permitselector extends AppCompatActivity {
                 if (selected == R.id.C_permit) {
                     Toast.makeText(getApplicationContext(), "choice: C", Toast.LENGTH_SHORT).show();
 //                    permitType = Permit.C;
-                    permitType = 1;
+                    permitType = C_PERMIT;
                 } else if (selected == R.id.Cplus_permit) {
                     Toast.makeText(getApplicationContext(), "choice: C+", Toast.LENGTH_SHORT).show();
-                    permitType = 2;
+                    permitType = CPLUS_PERMIT;
 //                } else if (selected == R.id.R_Permit) {
 //                    Toast.makeText(getApplicationContext(), "choice: R", Toast.LENGTH_SHORT).show();
-//                    permitType = 3;
+//                    permitType = R_PERMIT;
 //                } else if (selected == R.id.S_permit) {
 //                    Toast.makeText(getApplicationContext(), "choice: S", Toast.LENGTH_SHORT).show();
-//                    permitType = 4;
+//                    permitType = S_PERMIT;
                 } else if (selected == R.id.M_permit) {
                     Toast.makeText(getApplicationContext(), "choice: M", Toast.LENGTH_SHORT).show();
-                    permitType = 5;
+                    permitType = M_PERMIT;
                 } else if (selected == R.id.N_permit) {
                     Toast.makeText(getApplicationContext(), "choice: N", Toast.LENGTH_SHORT).show();
-                    permitType = 6;
+                    permitType = N_PERMIT;
                 } else { // R.id.Nplus_permit
                     Toast.makeText(getApplicationContext(), "choice: N+", Toast.LENGTH_SHORT).show();
-                    permitType = 7;
+                    permitType = NPLUS_PERMIT;
                 }
             }
 
@@ -90,7 +100,7 @@ public class permitselector extends AppCompatActivity {
             public void onClick(View v) {
                 int selectedId = mRadioGroupPermit.getCheckedRadioButtonId();
                 mRadioButtonPermit = (RadioButton) findViewById(selectedId);
-                mTestText.setText(mRadioButtonPermit.getText());
+//                mTestText.setText(mRadioButtonPermit.getText());
                 Toast.makeText(permitselector.this, mRadioButtonPermit.getText(), Toast.LENGTH_SHORT).show();
                 //go to the mapsIntent
                 Intent mapIntent = new Intent(v.getContext(), mapview.class);
