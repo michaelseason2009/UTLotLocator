@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">UT Lot Locater</string>
+    <string name="app_name">UT Lot Locator</string>
     <string name="action_settings">Settings</string>
     <string name="permit_selector">Select Permit</string>
     <string name="title_activity_permitselector">permit selector</string>

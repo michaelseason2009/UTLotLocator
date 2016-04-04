@@ -57,16 +57,6 @@
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="R Permit"
-            android:id="@+id/R_Permit" />
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="S Permit"
-            android:id="@+id/S_permit" />
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:text="M Permit"
             android:id="@+id/M_permit" />
         <RadioButton
@@ -116,3 +106,14 @@
 
 
 </RelativeLayout>
+<!--goes before m permit-->
+<!--<RadioButton-->
+<!--android:layout_width="wrap_content"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:text="R Permit"-->
+<!--android:id="@+id/R_Permit" />-->
+<!--<RadioButton-->
+<!--android:layout_width="wrap_content"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:text="S Permit"-->
+<!--android:id="@+id/S_permit" />-->

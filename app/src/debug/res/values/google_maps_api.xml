@@ -6,6 +6,11 @@
 
     https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=BA:5D:6A:31:9A:32:2E:E3:9D:65:79:54:1A:38:41:E4:74:81:2A:E3%3Bjsm.utlotlocater
 
+    our fingerprint
+    DF:4C:EF:A7:B5:86:5B:6B:57:1D:31:50:8C:AB:43:BA:85:BA:B2:85
+    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=DF:4C:EF:A7:B5:86:5B:6B:57:1D:31:50:8C:AB:43:BA:85:BA:B2:85%3Bjsm.utlotlocater
+
+
     You can also add your credentials to an existing key, using this line:
     BA:5D:6A:31:9A:32:2E:E3:9D:65:79:54:1A:38:41:E4:74:81:2A:E3;jsm.utlotlocater
 
@@ -15,8 +20,10 @@
     Once you have your key (it starts with "AIza"), replace the "google_maps_key"
     string in this file.
     -->
-    <string name="goole_maps_key" templateMergeStrategy="preserve" translatable="false">
-        YOUR_KEY_HERE
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">
+        AIzaSyC-qAT06PcPvd-scp0imY5949CqgsCjkAU
     </string>
-    <string name="google_maps_key">AIzaSyB7Z4b5LbZLFrCGhuUrqPtSqo_pnjORyDU</string>
+
 </resources>
+<!--<string name="google_maps_key">AIzaSyB7Z4b5LbZLFrCGhuUrqPtSqo_pnjORyDU</string>-->
+<!-- Chou's key-->

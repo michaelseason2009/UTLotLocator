@@ -19,8 +19,9 @@ import android.widget.Toast;
 public class permitselector extends AppCompatActivity {
 
     public enum Permit {
-        C,Cplus, R, S, M, N, Nplus
+        C, Cplus, R, S, M, N, Nplus
     }
+
     private static final String TAG = "UTLotLocator";
 
     private RadioButton mC, mCplus, mR, mS, mM, mN, mNplus;
@@ -28,73 +29,76 @@ public class permitselector extends AppCompatActivity {
     private RadioGroup mRadioGroupPermit;
     private TextView mTestText;
     private Button mButton;
-    private Permit permitType;
+//    private Permit permitType;
+    private int permitType;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_permitselector);
         Log.d(TAG, "in onCreate");
         //connect the radio group and buttons
-        mRadioGroupPermit=(RadioGroup)findViewById(R.id.radioGroup);
-        mC=(RadioButton) findViewById(R.id.C_permit);
-        mCplus=(RadioButton) findViewById(R.id.Cplus_permit);
-        mR=(RadioButton) findViewById(R.id.R_Permit);
-        mS=(RadioButton) findViewById(R.id.S_permit);
-        mM=(RadioButton) findViewById(R.id.M_permit);
-        mN=(RadioButton) findViewById(R.id.N_permit);
-        mNplus=(RadioButton) findViewById(R.id.Nplus_permit);
-        mTestText=(TextView) findViewById(R.id.testText);
-        mButton=(Button) findViewById(R.id.button);
+        mRadioGroupPermit = (RadioGroup) findViewById(R.id.radioGroup);
+        mC = (RadioButton) findViewById(R.id.C_permit);
+        mCplus = (RadioButton) findViewById(R.id.Cplus_permit);
+//        mR = (RadioButton) findViewById(R.id.R_Permit);
+//        mS = (RadioButton) findViewById(R.id.S_permit);
+        mM = (RadioButton) findViewById(R.id.M_permit);
+        mN = (RadioButton) findViewById(R.id.N_permit);
+        mNplus = (RadioButton) findViewById(R.id.Nplus_permit);
+        mTestText = (TextView) findViewById(R.id.testText);
+        mButton = (Button) findViewById(R.id.button);
 
         //set default permit type
-        permitType=permitType.C;
+        permitType = 1;
 
         //testing for selection
         mRadioGroupPermit.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int selected) {
-                if(selected == R.id.C_permit) {
+                if (selected == R.id.C_permit) {
                     Toast.makeText(getApplicationContext(), "choice: C", Toast.LENGTH_SHORT).show();
-                    permitType=Permit.C;
-                } else if(selected == R.id.Cplus_permit) {
+//                    permitType = Permit.C;
+                    permitType = 1;
+                } else if (selected == R.id.Cplus_permit) {
                     Toast.makeText(getApplicationContext(), "choice: C+", Toast.LENGTH_SHORT).show();
-                    permitType=Permit.Cplus;
-                } else if(selected == R.id.R_Permit) {
-                    Toast.makeText(getApplicationContext(), "choice: R", Toast.LENGTH_SHORT).show();
-                    permitType=Permit.R;
-                } else if(selected == R.id.S_permit) {
-                    Toast.makeText(getApplicationContext(), "choice: S", Toast.LENGTH_SHORT).show();
-                    permitType=Permit.S;
-                } else if(selected == R.id.M_permit) {
+                    permitType = 2;
+//                } else if (selected == R.id.R_Permit) {
+//                    Toast.makeText(getApplicationContext(), "choice: R", Toast.LENGTH_SHORT).show();
+//                    permitType = 3;
+//                } else if (selected == R.id.S_permit) {
+//                    Toast.makeText(getApplicationContext(), "choice: S", Toast.LENGTH_SHORT).show();
+//                    permitType = 4;
+                } else if (selected == R.id.M_permit) {
                     Toast.makeText(getApplicationContext(), "choice: M", Toast.LENGTH_SHORT).show();
-                    permitType=Permit.M;
-                } else if(selected == R.id.N_permit) {
+                    permitType = 5;
+                } else if (selected == R.id.N_permit) {
                     Toast.makeText(getApplicationContext(), "choice: N", Toast.LENGTH_SHORT).show();
-                    permitType=Permit.N;
-                } else {
+                    permitType = 6;
+                } else { // R.id.Nplus_permit
                     Toast.makeText(getApplicationContext(), "choice: N+", Toast.LENGTH_SHORT).show();
-                    permitType=Permit.Nplus;
+                    permitType = 7;
                 }
             }
 
         });
 
 
-            //listen for the button and go to the map activity
+        //listen for the button and go to the map activity
         mButton.setOnClickListener(new View.OnClickListener() {
-        @Override
-            public void onClick(View v){
+            @Override
+            public void onClick(View v) {
                 int selectedId = mRadioGroupPermit.getCheckedRadioButtonId();
                 mRadioButtonPermit = (RadioButton) findViewById(selectedId);
                 mTestText.setText(mRadioButtonPermit.getText());
                 Toast.makeText(permitselector.this, mRadioButtonPermit.getText(), Toast.LENGTH_SHORT).show();
-                //go to the maps
+                //go to the mapsIntent
                 Intent mapIntent = new Intent(v.getContext(), mapview.class);
                 mapIntent.putExtra("permitType", permitType);
                 startActivity(mapIntent);
             }
         });
-          //Spinner spinner = (Spinner) findViewById(R.id.spinner);
+        //Spinner spinner = (Spinner) findViewById(R.id.spinner);
 //        // Create an ArrayAdapter using the string array and a default spinner layout
 //        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
 //                R.array.permit_array, android.R.layout.simple_spinner_item);
