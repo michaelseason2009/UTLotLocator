@@ -124,7 +124,7 @@ public class mapview extends FragmentActivity implements OnMapReadyCallback, Goo
                 LatLng lot113c = new LatLng(30.282140, -97.725518);
                 mMap.addMarker(new MarkerOptions().position(lot113c).title(getString(R.string.l113_title)));
                 LatLng lot37c = new LatLng(30.283916, -97.728252);
-                mMap.addMarker(new MarkerOptions().position(lot113c).title(getString(R.string.l37c_title)));
+                mMap.addMarker(new MarkerOptions().position(lot37c).title(getString(R.string.l37c_title)));
                 break;
 //            case 3:  // R
 //                break;
