@@ -234,6 +234,66 @@ public class mapview extends FragmentActivity implements OnMapReadyCallback, Goo
                     pic.setImageResource(R.drawable.tsg);
                     title.setText(R.string.tsg_title);
 
+                } else if (markerTitle.equals(getString(R.string.mDk_title))) {
+                    pic.setImageResource(R.drawable.mdk);
+                    title.setText(R.string.mDk_title);
+
+                } else if (markerTitle.equals(getString(R.string.mRdm_title))) {
+                    pic.setImageResource(R.drawable.mrdm);
+                    title.setText(R.string.mRdm_title);
+
+                } else if (markerTitle.equals(getString(R.string.mTr_title))) {
+                    pic.setImageResource(R.drawable.mtr);
+                    title.setText(R.string.mTr_title);
+
+                } else if (markerTitle.equals(getString(R.string.mSw_title))) {
+                    pic.setImageResource(R.drawable.msw);
+                    title.setText(R.string.mSw_title);
+
+                } else if (markerTitle.equals(getString(R.string.m27_title))) {
+                    pic.setImageResource(R.drawable.m27);
+                    title.setText(R.string.m27_title);
+
+                } else if (markerTitle.equals(getString(R.string.mWh_title))) {
+                    pic.setImageResource(R.drawable.mwh);
+                    title.setText(R.string.mWh_title);
+
+                } else if (markerTitle.equals(getString(R.string.mbur_title))) {
+                    pic.setImageResource(R.drawable.mbur);
+                    title.setText(R.string.mbur_title);
+
+                } else if (markerTitle.equals(getString(R.string.m24_title))) {
+                    pic.setImageResource(R.drawable.m24);
+                    title.setText(R.string.m24_title);
+
+                } else if (markerTitle.equals(getString(R.string.mJes_title))) {
+                    pic.setImageResource(R.drawable.mjes);
+                    title.setText(R.string.mJes_title);
+
+                } else if (markerTitle.equals(getString(R.string.mSjc_title))) {
+                    pic.setImageResource(R.drawable.msjc);
+                    title.setText(R.string.mSjc_title);
+
+                } else if (markerTitle.equals(getString(R.string.mL70S_title))) {
+                    pic.setImageResource(R.drawable.ml70s);
+                    title.setText(R.string.mL70S_title);
+
+                } else if (markerTitle.equals(getString(R.string.mL70N_title))) {
+                    pic.setImageResource(R.drawable.ml70n);
+                    title.setText(R.string.mL70N_title);
+
+                } else if (markerTitle.equals(getString(R.string.mL118_title))) {
+                    pic.setImageResource(R.drawable.lot118);
+                    title.setText(R.string.mL118_title);
+
+                } else if (markerTitle.equals(getString(R.string.m16_title))) {
+                    pic.setImageResource(R.drawable.m16);
+                    title.setText(R.string.m16_title);
+
+                } else if (markerTitle.equals(getString(R.string.mL116_title))) {
+                    pic.setImageResource(R.drawable.ml116);
+                    title.setText(R.string.mL116_title);
+
                 }
 
                 // Returning the view containing InfoWindow contents
@@ -308,7 +368,7 @@ public class mapview extends FragmentActivity implements OnMapReadyCallback, Goo
                 LatLng mWh = new LatLng(30.290891, -97.739988);
                 mMap.addMarker(new MarkerOptions().position(mWh).title(getString(R.string.mWh_title)));
                 LatLng mBur = new LatLng(30.288603, -97.738115);
-                mMap.addMarker(new MarkerOptions().position(mBur).title(getString(R.string.mBur_title)));
+                mMap.addMarker(new MarkerOptions().position(mBur).title(getString(R.string.mbur_title)));
                 LatLng m24 = new LatLng(30.287563, -97.740752);
                 mMap.addMarker(new MarkerOptions().position(m24).title(getString(R.string.m24_title)));
                 LatLng mJes = new LatLng(30.281469, -97.735616);
@@ -321,6 +381,10 @@ public class mapview extends FragmentActivity implements OnMapReadyCallback, Goo
                 mMap.addMarker(new MarkerOptions().position(mL70N).title(getString(R.string.mL70N_title)));
                 LatLng mL118 = new LatLng(30.277802, -97.732050);
                 mMap.addMarker(new MarkerOptions().position(mL118).title(getString(R.string.mL118_title)));
+                LatLng m16 = new LatLng(30.279073, -97.743528);
+                mMap.addMarker(new MarkerOptions().position(m16).title(getString(R.string.m16_title)));
+                LatLng mL116 = new LatLng(30.287073, -97.723293);
+                mMap.addMarker(new MarkerOptions().position(mL116).title(getString(R.string.mL116_title)));
                 break;
             case 6:
                 break;

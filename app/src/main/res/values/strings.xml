@@ -39,13 +39,15 @@
     <string name="mSw_title">Motorcycle Spots - Speedway and Dean Keaton</string>
     <string name="m27_title">Motorcycle Spots - 27th</string>
     <string name="mWh_title">Motorcycle Spots - Whitis</string>
-    <string name="mBur_title">Motorcycle Spots - Behind Burdine</string>
+    <string name="mbur_title">Motorcycle Spots - Behind Burdine</string>
     <string name="m24_title">Motorcycle Spots - 24th</string>
     <string name="mJes_title">Motorcycle Spots - Jester Circle</string>
     <string name="mSjc_title">Motorcycle Spots - San Jacinto</string>
     <string name="mL70S_title">Motorcycle Spots - Lot 70 South Side</string>
     <string name="mL70N_title">Motorcycle Spots - Lot 70 North Side</string>
     <string name="mL118_title">Motorcycle Spots - Lot 118</string>
+    <string name="m16_title">Motorcycle Spots - W 16th</string>
+    <string name="mL116_title">Motorcycle Spots - Longhorn Lot 116</string>
     <string name="cPermit">C Permit</string>
     <string name="cplusPermit">C+ Permit</string>
     <string name="rPermit">R Permit</string>
