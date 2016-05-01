@@ -5,17 +5,6 @@
     android:orientation="vertical"
     android:background="@drawable/permitselector">
 
-<!--    <Spinner
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="3dp"
-        android:layout_alignParentLeft="true"
-        android:id="@+id/spinner"
-        android:prompt="@string/permit_selector"
-        android:background="#ffffff"
-        android:spinnerMode="dropdown"
-        android:theme="@style/Base.Widget.AppCompat.DropDownItem.Spinner" />
--->
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -38,36 +27,46 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Select Permit"
+            android:text="@string/permit_selector"
             android:id="@+id/textView" />
 
         <RadioButton
             android:checked="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="C Permit"
+            android:text="@string/cPermit"
             android:id="@+id/C_permit" />
 
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="C+ Permit"
+            android:text="@string/cplusPermit"
             android:id="@+id/Cplus_permit" />
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="M Permit"
+            android:text="@string/rPermit"
+            android:id="@+id/R_Permit" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sPermit"
+            android:id="@+id/S_permit" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mPermit"
             android:id="@+id/M_permit" />
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="N Permit"
+            android:text="@string/nPermit"
             android:id="@+id/N_permit" />
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="N+ Permit"
+            android:text="@string/nplusPermit"
             android:id="@+id/Nplus_permit" />
 
     </RadioGroup>
@@ -83,7 +82,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Welcome to the UT Lot Locator! Please select your permit type and press GO!"
+            android:text="@string/welcome"
             android:textAppearance="?android:textAppearanceLarge"
             android:id="@+id/textView2"
             android:layout_alignParentTop="true"
@@ -93,7 +92,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="GO!"
+            android:text="@string/go"
             android:id="@+id/button"
             android:layout_below="@id/textView2"
             android:layout_centerHorizontal="true"/>
@@ -101,14 +100,3 @@
 
 
 </RelativeLayout>
-<!--goes before m permit-->
-<!--<RadioButton-->
-<!--android:layout_width="wrap_content"-->
-<!--android:layout_height="wrap_content"-->
-<!--android:text="R Permit"-->
-<!--android:id="@+id/R_Permit" />-->
-<!--<RadioButton-->
-<!--android:layout_width="wrap_content"-->
-<!--android:layout_height="wrap_content"-->
-<!--android:text="S Permit"-->
-<!--android:id="@+id/S_permit" />-->

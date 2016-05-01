@@ -3,23 +3,121 @@
     <string name="action_settings">Settings</string>
     <string name="permit_selector">Select Permit</string>
     <string name="title_activity_permitselector">permit selector</string>
+    <string name="welcome">Welcome to the UT Lot Locator! Please select your permit type and press GO!</string>
+    <string name="go">GO!</string>
     <string name="l70_title">Lot 70</string>
     <string name="l37m_title">Lot 37 - Motorcycle</string>
     <string name="l37c_title">Lot 37 - C Spots</string>
-    <string name="l113_title">Lot 113</string>
-    <string name="m21st_title">21st Street - Motorcycle</string>
-    <string name="l35_title">Lot 35 - I-35 side</string>
-    <string-array name="permit_array">
-        <item>C Permit</item>
-        <item>C+ Permit</item>
-        <item>R Permit</item>
-        <item>S Permit</item>
-        <item>M Permit</item>
-        <item>N Permit</item>
-        <item>N+ Permit</item>
-    </string-array>
+    <string name="m21st_title">Motorcycle Spots - 21st</string>
+    <string name="l35_title">Longhorn Lot 35</string>
+    <string name="l113_title">Longhorn Lot 113</string>
+    <string name="l103_title">Longhorn Lot 103</string>
+    <string name="l118_title">Longhorn Lot 118</string>
+    <string name="l108_title">Longhorn Lot 108</string>
+    <string name="l104_title">Longhorn Lot 104</string>
+    <string name="l117_title">Longhorn Lot 117</string>
+    <string name="l119_title">Longhorn Lot 119</string>
+    <string name="l115_title">Longhorn Lot 115</string>
+    <string name="l109_title">Longhorn Lot 109</string>
+    <string name="l114_title">Longhorn Lot 114</string>
+    <string name="l110_title">Longhorn Lot 110</string>
+    <string name="l112_title">Longhorn Lot 112</string>
+    <string name="l116_title">Longhorn Lot 116</string>
+    <string name="l107_title">Longhorn Lot 107</string>
+    <string name="ccg_title">Conference Center Garage (CCG)</string>
+    <string name="brg_title">Brazos Garage (BRG)</string>
+    <string name="gug_title">Guadalupe Garage (GUG)</string>
+    <string name="mag_title">Manor Garage (MAG)</string>
+    <string name="sag_title">San Antonio Garage (SAG)</string>
+    <string name="sjg_title">San Jacinto Garage (SJG)</string>
+    <string name="swg_title">Speedway Garage (SWG)</string>
+    <string name="trg_title">Trinity Garage (TRG)</string>
+    <string name="tsg_title">27th Street Garage (TSG)</string>
+    <string name="mDk_title">Motorcycle Spots - Dean Keaton and Robert Dedman</string>
+    <string name="mRdm_title">Motorcycle Spots - Robert Dedman</string>
+    <string name="mTr_title">Motorcycle Spots - Trinity</string>
+    <string name="mSw_title">Motorcycle Spots - Speedway and Dean Keaton</string>
+    <string name="m27_title">Motorcycle Spots - 27th</string>
+    <string name="mWh_title">Motorcycle Spots - Whitis</string>
+    <string name="mBur_title">Motorcycle Spots - Behind Burdine</string>
+    <string name="m24_title">Motorcycle Spots - 24th</string>
+    <string name="mJes_title">Motorcycle Spots - Jester Circle</string>
+    <string name="mSjc_title">Motorcycle Spots - San Jacinto</string>
+    <string name="mL70S_title">Motorcycle Spots - Lot 70 South Side</string>
+    <string name="mL70N_title">Motorcycle Spots - Lot 70 North Side</string>
+    <string name="mL118_title">Motorcycle Spots - Lot 118</string>
+    <string name="cPermit">C Permit</string>
+    <string name="cplusPermit">C+ Permit</string>
+    <string name="rPermit">R Permit</string>
+    <string name="sPermit">S Permit</string>
+    <string name="mPermit">M Permit</string>
+    <string name="nPermit">N Permit</string>
+    <string name="nplusPermit">N+ Permit</string>
     <string name="title_activity_mapview">MapView</string>
-    <string name="goole_maps_key" templateMergeStrategy="preserve" translatable="false">
-        AIzaSyB7Z4b5LbZLFrCGhuUrqPtSqo_pnjORyDU
-    </string>
+    <string name="cPermitDesc">The C Permit is available to all registered students and those auditing
+        classes at the university. This permit allows students to park in any C lots from 6 A.M. to
+        4 A.M. daily. Longhorn Lots are also available with this permit 24/7 unless otherwise indicated
+        by signs. This permit does not have a limit on sales so parking becomes more challenging
+        throughout the day as spaces are taken.</string>
+    <string name="cplusPermitDesc">The C+ Permit is available to all registered students and those
+        auditing classes at the university. This permit allows students to park in any C lots from
+        6 A.M. to 4 A.M. daily. Longhorn Lots are also available with this permit 24/7 unless otherwise
+        indicated by signs. This permit also allows students to park in all university garages
+        (except CCG) between 5 P.M. and 4 A.M. weekly and all day on weekends (Friday at 5 P.M. to
+        Monday at 4 A.M.). This permit does not have a limit on sales so parking becomes more challenging
+        throughout the day as spaces are taken.</string>
+    <string name="rPermitDesc">The R Permit is available to any UT Austin student who has a UT Housing
+        and Food Residence Hall contract. Garage permits offer the most convenient parking options
+        for residence halls with many of our garages next to, or across the street from, university
+        housing. R permits are valid only in the garage for which they are purchased. Only limited
+        numbers of R permits are sold, meaning that in general you should always be able to find a
+        parking space. R parking is restricted to the upper level of the garages Monday-Friday, but
+        a majority of the spaces available are covered. Nonetheless, you might be required to park
+        on the roof at times during the term for your permit. This permit should provide parking for
+        you in your assigned garage 24/7, with few exceptions. Occasionally, R permit holders may be
+        relocated to accommodate large events. Advanced e-mail notifications will be sent and in
+        general, you can expect to be relocated to another garage. Longhorn Lots are also available
+        for all permits.</string>
+    <string name="sPermitDesc">The S Permit is available to UT students who live off campus (i.e.,
+        those who do NOT have an official university residence hall contract). S permits are valid only
+        in the garage for which they are purchased. Only limited numbers of S permits are sold, meaning
+        that in general you should always be able to find a parking space. S parking is restricted to
+        the upper level of the garages Monday-Friday, but a majority of the spaces available are covered.
+        Nonetheless, you might be required to park on the roof at times during the term for your permit.
+        This permit should provide parking for you in your assigned garage 24/7, with few exceptions.
+        This permit is not intended for habitual overnight storage of your vehicle, and this will cost
+        an additional storage fee. Occasionally, S permit holders may be relocated to accommodate large
+        events. Advanced e-mail notifications will be sent and in general, you can expect to be relocated
+        to another garage. Longhorn Lots are also available for all permits.</string>
+    <string name="mPermitDesc">The M Permit is available to any affiliate of the university. Intended
+        for use with a motorcycle, motor scooter, moped, or motor-assisted bicycles. M permit holders may
+        only park in designated motorcycle parking areas from 7:30 a.m. to 3:30 p.m. They may park in
+        surface lot automobile spaces after permit restrictions have lifted as indicated by signs; they
+        may not park at any time in automobile garage spaces. Vehicle must be parked perpendicular to the
+        curb when applicable. Longhorn Lots are available with this permit weekdays after 3:30 p.m. and
+        weekends from Friday at 3:30 p.m. to Monday at 7:30 a.m.</string>
+    <string name="nPermitDesc">The N Permit is available to students, faculty, staff, and other affiliates.
+        N permit holders may park in spaces for \"Any UT Permit\", and Longhorn Lots. Times restricted to
+        weeknights between 5:45 p.m. and 7:30 a.m. and all day on weekends from Friday at 5:45 p.m. to
+        Monday at 7:30 a.m. (unless otherwise indicated by signs — Note: some Longhorn Lots have no
+        parking between 4 a.m. and 6 a.m.).</string>
+    <string name="nplusPermitDesc">The N+ Permit is available to students, faculty, staff, and other
+        affiliates. Parking is not guaranteed in any particular garage, but is accessible for all garages
+        (except the Conference Center Garage - CCG) weeknights between 5 p.m. and 4 a.m. and all day on
+        weekends (Friday at 5 p.m. to Monday at 4 a.m.) on a space-available basis. Additionally, the
+        N+ Permit grants access to park in Longhorn Lots and spaces signed \"Any UT Permit\" weeknights
+        between 5:45 p.m. and 7:30 a.m. and all day on weekends (Friday at 5:45 p.m. to Monday at
+        7:30 a.m.).</string>
 </resources>
+<!--<string-array name="permit_array">-->
+<!--<item>C Permit</item>-->
+<!--<item>C+ Permit</item>-->
+<!--<item>R Permit</item>-->
+<!--<item>S Permit</item>-->
+<!--<item>M Permit</item>-->
+<!--<item>N Permit</item>-->
+<!--<item>N+ Permit</item>-->
+<!--</string-array>-->
+<!--<string name="goole_maps_key" templateMergeStrategy="preserve" translatable="false">-->
+        <!--AIzaSyB7Z4b5LbZLFrCGhuUrqPtSqo_pnjORyDU-->
+    <!--</string>-->

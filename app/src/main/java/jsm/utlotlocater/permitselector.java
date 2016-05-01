@@ -18,11 +18,6 @@ import android.widget.Toast;
 
 public class permitselector extends AppCompatActivity {
 
-    // had trouble passing a custom type through intents
-    // so we switched to ints
-//    public enum Permit {
-//        C, Cplus, R, S, M, N, Nplus
-//    }
     private static final int C_PERMIT = 1;
     private static final int CPLUS_PERMIT = 2;
     private static final int R_PERMIT = 3;
@@ -51,8 +46,8 @@ public class permitselector extends AppCompatActivity {
         mRadioGroupPermit = (RadioGroup) findViewById(R.id.radioGroup);
         mC = (RadioButton) findViewById(R.id.C_permit);
         mCplus = (RadioButton) findViewById(R.id.Cplus_permit);
-//        mR = (RadioButton) findViewById(R.id.R_Permit);
-//        mS = (RadioButton) findViewById(R.id.S_permit);
+        mR = (RadioButton) findViewById(R.id.R_Permit);
+        mS = (RadioButton) findViewById(R.id.S_permit);
         mM = (RadioButton) findViewById(R.id.M_permit);
         mN = (RadioButton) findViewById(R.id.N_permit);
         mNplus = (RadioButton) findViewById(R.id.Nplus_permit);
@@ -73,12 +68,12 @@ public class permitselector extends AppCompatActivity {
                 } else if (selected == R.id.Cplus_permit) {
                     Toast.makeText(getApplicationContext(), "choice: C+", Toast.LENGTH_SHORT).show();
                     permitType = CPLUS_PERMIT;
-//                } else if (selected == R.id.R_Permit) {
-//                    Toast.makeText(getApplicationContext(), "choice: R", Toast.LENGTH_SHORT).show();
-//                    permitType = R_PERMIT;
-//                } else if (selected == R.id.S_permit) {
-//                    Toast.makeText(getApplicationContext(), "choice: S", Toast.LENGTH_SHORT).show();
-//                    permitType = S_PERMIT;
+                } else if (selected == R.id.R_Permit) {
+                    Toast.makeText(getApplicationContext(), "choice: R", Toast.LENGTH_SHORT).show();
+                    permitType = R_PERMIT;
+                } else if (selected == R.id.S_permit) {
+                    Toast.makeText(getApplicationContext(), "choice: S", Toast.LENGTH_SHORT).show();
+                    permitType = S_PERMIT;
                 } else if (selected == R.id.M_permit) {
                     Toast.makeText(getApplicationContext(), "choice: M", Toast.LENGTH_SHORT).show();
                     permitType = M_PERMIT;
@@ -108,14 +103,6 @@ public class permitselector extends AppCompatActivity {
                 startActivity(mapIntent);
             }
         });
-        //Spinner spinner = (Spinner) findViewById(R.id.spinner);
-//        // Create an ArrayAdapter using the string array and a default spinner layout
-//        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-//                R.array.permit_array, android.R.layout.simple_spinner_item);
-//        // Specify the layout to use when the list of choices appears
-//        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-//        // Apply the adapter to the spinner
-//        spinner.setAdapter(adapter);
     }
 
     @Override
@@ -136,41 +123,4 @@ public class permitselector extends AppCompatActivity {
         Log.d(TAG, "in onStop");
     }//end onStop override method
 
-    //radio group selector code
-//    public void onRadioButtonClicked(View view) {
-//        // Is the button now checked?
-//        boolean checked = ((RadioButton) view).isChecked();
-//
-//        // Check which radio button was clicked
-//        switch(view.getId()) {
-//            case R.id.C_permit:
-//                if (checked)
-//                    Log.d(TAG, "C");
-//                    break;
-//            case R.id.Cplus_permit:
-//                if (checked)
-//                    Log.d(TAG, "C+");
-//                    break;
-//            case R.id.R_Permit:
-//                if (checked)
-//                    Log.d(TAG, "R");
-//                    break;
-//            case R.id.S_permit:
-//                if (checked)
-//                    Log.d(TAG, "S");
-//                    break;
-//            case R.id.M_permit:
-//                if (checked)
-//                    Log.d(TAG, "M");
-//                    break;
-//            case R.id.N_permit:
-//                if (checked)
-//                    Log.d(TAG, "N");
-//                    break;
-//            case R.id.Nplus_permit:
-//                if (checked)
-//                    Log.d(TAG, "N+");
-//                    break;
-//        }
-//    }
 }

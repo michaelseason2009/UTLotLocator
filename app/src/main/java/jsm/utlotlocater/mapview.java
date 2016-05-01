@@ -17,6 +17,8 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import org.w3c.dom.Text;
+
 public class mapview extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnInfoWindowClickListener {
 
     private GoogleMap mMap;
@@ -38,6 +40,38 @@ public class mapview extends FragmentActivity implements OnMapReadyCallback, Goo
         Intent intent = getIntent();
         // As of now, this line crashes the app when MapView is called.
         currentPermit = intent.getIntExtra("permitType", 1);
+        TextView p_title = (TextView) findViewById(R.id.p_title);
+        TextView p_desc = (TextView) findViewById(R.id.p_desc);
+        switch (currentPermit){
+            case 1: // C
+                p_title.setText(getString(R.string.cPermit));
+                p_desc.setText(getString(R.string.cPermitDesc));
+                break;
+            case 2: // C+
+                p_title.setText(getString(R.string.cplusPermit));
+                p_desc.setText(getString(R.string.cplusPermitDesc));
+                break;
+            case 3: // R
+                p_title.setText(getString(R.string.rPermit));
+                p_desc.setText(getString(R.string.rPermitDesc));
+                break;
+            case 4: // S
+                p_title.setText(getString(R.string.sPermit));
+                p_desc.setText(getString(R.string.sPermitDesc));
+                break;
+            case 5: // M
+                p_title.setText(getString(R.string.mPermit));
+                p_desc.setText(getString(R.string.mPermitDesc));
+                break;
+            case 6: // N
+                p_title.setText(getString(R.string.nPermit));
+                p_desc.setText(getString(R.string.nPermitDesc));
+                break;
+            case 7: // N+
+                p_title.setText(getString(R.string.nplusPermit));
+                p_desc.setText(getString(R.string.nplusPermitDesc));
+                break;
+        }
 
 
 
@@ -58,6 +92,12 @@ public class mapview extends FragmentActivity implements OnMapReadyCallback, Goo
         mMap = googleMap;
         LatLng CenterPt = new LatLng(30.285218, -97.732760);
         mMap.setOnInfoWindowClickListener(this);
+//        if (checkSelfPermission("android.permission.ACCESS_FINE_LOCATION") == getPackageManager().PERMISSION_GRANTED)
+        try {
+            mMap.setMyLocationEnabled(true);
+        }catch(SecurityException s) {
+            return;
+        }
 
         // info window adapter
         mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
@@ -81,8 +121,7 @@ public class mapview extends FragmentActivity implements OnMapReadyCallback, Goo
                 String markerTitle = arg0.getTitle();
 
                 // Setting the custom info window's image and title
-                // One for each marker possibility (minus each marker copy
-                //                                  e.g. lot113 is used twice)
+                // One for each marker possibility
                 if (markerTitle.equals(getString(R.string.l70_title))) {
                     pic.setImageResource(R.drawable.lot70);
                     title.setText(R.string.l70_title);
@@ -107,6 +146,94 @@ public class mapview extends FragmentActivity implements OnMapReadyCallback, Goo
                     pic.setImageResource(R.drawable.lot35);
                     title.setText(R.string.l35_title);
 
+                } else if (markerTitle.equals(getString(R.string.l103_title))) {
+                    pic.setImageResource(R.drawable.lot103);
+                    title.setText(R.string.l103_title);
+
+                } else if (markerTitle.equals(getString(R.string.l104_title))) {
+                    pic.setImageResource(R.drawable.lot104);
+                    title.setText(R.string.l104_title);
+
+                } else if (markerTitle.equals(getString(R.string.l107_title))) {
+                    pic.setImageResource(R.drawable.lot107);
+                    title.setText(R.string.l107_title);
+
+                } else if (markerTitle.equals(getString(R.string.l108_title))) {
+                    pic.setImageResource(R.drawable.lot108);
+                    title.setText(R.string.l108_title);
+
+                } else if (markerTitle.equals(getString(R.string.l109_title))) {
+                    pic.setImageResource(R.drawable.lot109);
+                    title.setText(R.string.l109_title);
+
+                } else if (markerTitle.equals(getString(R.string.l110_title))) {
+                    pic.setImageResource(R.drawable.lot110);
+                    title.setText(R.string.l110_title);
+
+                } else if (markerTitle.equals(getString(R.string.l112_title))) {
+                    pic.setImageResource(R.drawable.lot112);
+                    title.setText(R.string.l112_title);
+
+                } else if (markerTitle.equals(getString(R.string.l114_title))) {
+                    pic.setImageResource(R.drawable.lot114);
+                    title.setText(R.string.l114_title);
+
+                } else if (markerTitle.equals(getString(R.string.l115_title))) {
+                    pic.setImageResource(R.drawable.lot115);
+                    title.setText(R.string.l115_title);
+
+                } else if (markerTitle.equals(getString(R.string.l116_title))) {
+                    pic.setImageResource(R.drawable.lot116);
+                    title.setText(R.string.l116_title);
+
+                } else if (markerTitle.equals(getString(R.string.l117_title))) {
+                    pic.setImageResource(R.drawable.lot117);
+                    title.setText(R.string.l117_title);
+
+                } else if (markerTitle.equals(getString(R.string.l118_title))) {
+                    pic.setImageResource(R.drawable.lot118);
+                    title.setText(R.string.l118_title);
+
+                } else if (markerTitle.equals(getString(R.string.l119_title))) {
+                    pic.setImageResource(R.drawable.lot119);
+                    title.setText(R.string.l119_title);
+
+                } else if (markerTitle.equals(getString(R.string.brg_title))) {
+                    pic.setImageResource(R.drawable.brg);
+                    title.setText(R.string.brg_title);
+
+                } else if (markerTitle.equals(getString(R.string.ccg_title))) {
+                    pic.setImageResource(R.drawable.ccg);
+                    title.setText(R.string.ccg_title);
+
+                } else if (markerTitle.equals(getString(R.string.gug_title))) {
+                    pic.setImageResource(R.drawable.gug);
+                    title.setText(R.string.gug_title);
+
+                } else if (markerTitle.equals(getString(R.string.mag_title))) {
+                    pic.setImageResource(R.drawable.mag);
+                    title.setText(R.string.mag_title);
+
+                } else if (markerTitle.equals(getString(R.string.sag_title))) {
+                    pic.setImageResource(R.drawable.sag);
+                    title.setText(R.string.sag_title);
+
+                } else if (markerTitle.equals(getString(R.string.sjg_title))) {
+                    pic.setImageResource(R.drawable.sjg);
+                    title.setText(R.string.sjg_title);
+
+                } else if (markerTitle.equals(getString(R.string.swg_title))) {
+                    pic.setImageResource(R.drawable.swg);
+                    title.setText(R.string.swg_title);
+
+                } else if (markerTitle.equals(getString(R.string.trg_title))) {
+                    pic.setImageResource(R.drawable.trg);
+                    title.setText(R.string.trg_title);
+
+                } else if (markerTitle.equals(getString(R.string.tsg_title))) {
+                    pic.setImageResource(R.drawable.tsg);
+                    title.setText(R.string.tsg_title);
+
                 }
 
                 // Returning the view containing InfoWindow contents
@@ -121,29 +248,132 @@ public class mapview extends FragmentActivity implements OnMapReadyCallback, Goo
             case 2: // C and C+
                 LatLng lot70c = new LatLng(30.281352, -97.730823);
                 mMap.addMarker(new MarkerOptions().position(lot70c).title(getString(R.string.l70_title)));
-                LatLng lot113c = new LatLng(30.282140, -97.725518);
-                mMap.addMarker(new MarkerOptions().position(lot113c).title(getString(R.string.l113_title)));
                 LatLng lot37c = new LatLng(30.283916, -97.728252);
                 mMap.addMarker(new MarkerOptions().position(lot37c).title(getString(R.string.l37c_title)));
+                if(currentPermit == 2) { // C+ specific
+                    LatLng brg = new LatLng(30.280952, -97.736243);
+                    mMap.addMarker(new MarkerOptions().position(brg).title(getString(R.string.brg_title)));
+                    LatLng gug = new LatLng(30.279390, -97.743028);
+                    mMap.addMarker(new MarkerOptions().position(gug).title(getString(R.string.gug_title)));
+                    LatLng mag = new LatLng(30.282589, -97.731074);
+                    mMap.addMarker(new MarkerOptions().position(mag).title(getString(R.string.mag_title)));
+                    LatLng sag = new LatLng(30.288677, -97.742646);
+                    mMap.addMarker(new MarkerOptions().position(sag).title(getString(R.string.sag_title)));
+                    LatLng sjg = new LatLng(30.287743, -97.732849);
+                    mMap.addMarker(new MarkerOptions().position(sjg).title(getString(R.string.sjg_title)));
+                    LatLng swg = new LatLng(30.291188, -97.737120);
+                    mMap.addMarker(new MarkerOptions().position(swg).title(getString(R.string.swg_title)));
+                    LatLng trg = new LatLng(30.279104, -97.733862);
+                    mMap.addMarker(new MarkerOptions().position(trg).title(getString(R.string.trg_title)));
+                    LatLng tsg = new LatLng(30.291298, -97.738554);
+                    mMap.addMarker(new MarkerOptions().position(tsg).title(getString(R.string.tsg_title)));
+                }
                 break;
-//            case 3:  // R
-//                break;
-//            case 4:  // S
-//                break;
+            case 3:  // R and S
+            case 4:
+                LatLng brg = new LatLng(30.280952, -97.736243);
+                mMap.addMarker(new MarkerOptions().position(brg).title(getString(R.string.brg_title)));
+                LatLng ccg = new LatLng(30.281934, -97.740420);
+                mMap.addMarker(new MarkerOptions().position(ccg).title(getString(R.string.ccg_title)));
+                LatLng gug = new LatLng(30.279390, -97.743028);
+                mMap.addMarker(new MarkerOptions().position(gug).title(getString(R.string.gug_title)));
+                LatLng mag = new LatLng(30.282589, -97.731074);
+                mMap.addMarker(new MarkerOptions().position(mag).title(getString(R.string.mag_title)));
+                LatLng sag = new LatLng(30.288677, -97.742646);
+                mMap.addMarker(new MarkerOptions().position(sag).title(getString(R.string.sag_title)));
+                LatLng sjg = new LatLng(30.287743, -97.732849);
+                mMap.addMarker(new MarkerOptions().position(sjg).title(getString(R.string.sjg_title)));
+                LatLng swg = new LatLng(30.291188, -97.737120);
+                mMap.addMarker(new MarkerOptions().position(swg).title(getString(R.string.swg_title)));
+                LatLng trg = new LatLng(30.279104, -97.733862);
+                mMap.addMarker(new MarkerOptions().position(trg).title(getString(R.string.trg_title)));
+                LatLng tsg = new LatLng(30.291298, -97.738554);
+                mMap.addMarker(new MarkerOptions().position(tsg).title(getString(R.string.tsg_title)));
+                break;
             case 5:  // M
                 LatLng lot37m = new LatLng(30.283475, -97.728240);
                 mMap.addMarker(new MarkerOptions().position(lot37m).title(getString(R.string.l37m_title)));
                 LatLng m21st = new LatLng(30.283606, -97.739193);
                 mMap.addMarker(new MarkerOptions().position(m21st).title(getString(R.string.m21st_title)));
+                LatLng mDk = new LatLng(30.287565, -97.728848);
+                mMap.addMarker(new MarkerOptions().position(mDk).title(getString(R.string.mDk_title)));
+                LatLng mRdm = new LatLng(30.287529, -97.729881);
+                mMap.addMarker(new MarkerOptions().position(mRdm).title(getString(R.string.mRdm_title)));
+                LatLng mTr = new LatLng(30.287846, -97.731615);
+                mMap.addMarker(new MarkerOptions().position(mTr).title(getString(R.string.mTr_title)));
+                LatLng mSw = new LatLng(30.289754, -97.736723);
+                mMap.addMarker(new MarkerOptions().position(mSw).title(getString(R.string.mSw_title)));
+                LatLng m27 = new LatLng(30.291578, -97.738141);
+                mMap.addMarker(new MarkerOptions().position(m27).title(getString(R.string.m27_title)));
+                LatLng mWh = new LatLng(30.290891, -97.739988);
+                mMap.addMarker(new MarkerOptions().position(mWh).title(getString(R.string.mWh_title)));
+                LatLng mBur = new LatLng(30.288603, -97.738115);
+                mMap.addMarker(new MarkerOptions().position(mBur).title(getString(R.string.mBur_title)));
+                LatLng m24 = new LatLng(30.287563, -97.740752);
+                mMap.addMarker(new MarkerOptions().position(m24).title(getString(R.string.m24_title)));
+                LatLng mJes = new LatLng(30.281469, -97.735616);
+                mMap.addMarker(new MarkerOptions().position(mJes).title(getString(R.string.mJes_title)));
+                LatLng mSjc = new LatLng(30.280634, -97.733674);
+                mMap.addMarker(new MarkerOptions().position(mSjc).title(getString(R.string.mSjc_title)));
+                LatLng mL70S = new LatLng(30.281080, -97.731058);
+                mMap.addMarker(new MarkerOptions().position(mL70S).title(getString(R.string.mL70S_title)));
+                LatLng mL70N = new LatLng(30.281644, -97.730954);
+                mMap.addMarker(new MarkerOptions().position(mL70N).title(getString(R.string.mL70N_title)));
+                LatLng mL118 = new LatLng(30.277802, -97.732050);
+                mMap.addMarker(new MarkerOptions().position(mL118).title(getString(R.string.mL118_title)));
                 break;
             case 6:
+                break;
             case 7: // N and N+
-                LatLng lot113 = new LatLng(30.282140, -97.725518);
-                mMap.addMarker(new MarkerOptions().position(lot113).title(getString(R.string.l113_title)));
-                LatLng lot35 = new LatLng(30.282071, -97.727128);
-                mMap.addMarker(new MarkerOptions().position(lot35).title(getString(R.string.l35_title)));
+                LatLng brgN = new LatLng(30.280952, -97.736243);
+                mMap.addMarker(new MarkerOptions().position(brgN).title(getString(R.string.brg_title)));
+                LatLng gugN = new LatLng(30.279390, -97.743028);
+                mMap.addMarker(new MarkerOptions().position(gugN).title(getString(R.string.gug_title)));
+                LatLng magN = new LatLng(30.282589, -97.731074);
+                mMap.addMarker(new MarkerOptions().position(magN).title(getString(R.string.mag_title)));
+                LatLng sagN = new LatLng(30.288677, -97.742646);
+                mMap.addMarker(new MarkerOptions().position(sagN).title(getString(R.string.sag_title)));
+                LatLng sjgN = new LatLng(30.287743, -97.732849);
+                mMap.addMarker(new MarkerOptions().position(sjgN).title(getString(R.string.sjg_title)));
+                LatLng swgN = new LatLng(30.291188, -97.737120);
+                mMap.addMarker(new MarkerOptions().position(swgN).title(getString(R.string.swg_title)));
+                LatLng trgN = new LatLng(30.279104, -97.733862);
+                mMap.addMarker(new MarkerOptions().position(trgN).title(getString(R.string.trg_title)));
+                LatLng tsgN = new LatLng(30.291298, -97.738554);
+                mMap.addMarker(new MarkerOptions().position(tsgN).title(getString(R.string.tsg_title)));
                 break;
         }
+        // add longhorn lot markers for all cases
+        LatLng lot35 = new LatLng(30.282071, -97.727128);
+        mMap.addMarker(new MarkerOptions().position(lot35).title(getString(R.string.l35_title)));
+        LatLng lot113 = new LatLng(30.282140, -97.725518);
+        mMap.addMarker(new MarkerOptions().position(lot113).title(getString(R.string.l113_title)));
+        LatLng lot118 = new LatLng(30.278272, -97.731690);
+        mMap.addMarker(new MarkerOptions().position(lot118).title(getString(R.string.l118_title)));
+        LatLng lot108 = new LatLng(30.275395, -97.732232);
+        mMap.addMarker(new MarkerOptions().position(lot108).title(getString(R.string.l108_title)));
+        LatLng lot104 = new LatLng(30.279697, -97.727748);
+        mMap.addMarker(new MarkerOptions().position(lot104).title(getString(R.string.l104_title)));
+        LatLng lot117 = new LatLng(30.279651, -97.724946);
+        mMap.addMarker(new MarkerOptions().position(lot117).title(getString(R.string.l117_title)));
+        LatLng lot119 = new LatLng(30.279600, -97.723572);
+        mMap.addMarker(new MarkerOptions().position(lot119).title(getString(R.string.l119_title)));
+        LatLng lot115 = new LatLng(30.280945, -97.723810);
+        mMap.addMarker(new MarkerOptions().position(lot115).title(getString(R.string.l115_title)));
+        LatLng lot109 = new LatLng(30.281384, -97.724809);
+        mMap.addMarker(new MarkerOptions().position(lot109).title(getString(R.string.l109_title)));
+        LatLng lot114 = new LatLng(30.281816, -97.724248);
+        mMap.addMarker(new MarkerOptions().position(lot114).title(getString(R.string.l114_title)));
+        LatLng lot110 = new LatLng(30.282708, -97.724149);
+        mMap.addMarker(new MarkerOptions().position(lot110).title(getString(R.string.l110_title)));
+        LatLng lot112 = new LatLng(30.283009, -97.725839);
+        mMap.addMarker(new MarkerOptions().position(lot112).title(getString(R.string.l112_title)));
+        LatLng lot116 = new LatLng(30.287014, -97.723543);
+        mMap.addMarker(new MarkerOptions().position(lot116).title(getString(R.string.l116_title)));
+        LatLng lot107 = new LatLng(30.286022, -97.724440);
+        mMap.addMarker(new MarkerOptions().position(lot107).title(getString(R.string.l107_title)));
+        LatLng lot103 = new LatLng(30.281119, -97.726136);
+        mMap.addMarker(new MarkerOptions().position(lot103).title(getString(R.string.l103_title)));
         // move camera to central point
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(CenterPt, 14));
     }
