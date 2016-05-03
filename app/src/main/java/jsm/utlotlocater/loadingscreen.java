@@ -10,6 +10,8 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.firebase.client.Firebase;
+
 public class loadingscreen extends AppCompatActivity {
 
     @Override
@@ -27,6 +29,8 @@ public class loadingscreen extends AppCompatActivity {
 //                        .setAction("Action", null).show();
 //            }
 //        });
+        //initalize firebase
+        Firebase.setAndroidContext(this);
 
         Intent mainIntent = new Intent(loadingscreen.this,permitselector.class);
         loadingscreen.this.startActivity(mainIntent);

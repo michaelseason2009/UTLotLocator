@@ -5,6 +5,7 @@
     <string name="title_activity_permitselector">permit selector</string>
     <string name="welcome">Welcome to the UT Lot Locator! Please select your permit type and press GO!</string>
     <string name="go">GO!</string>
+    <string name="messagehelp">Enter Name</string>
     <string name="l70_title">Lot 70</string>
     <string name="l37m_title">Lot 37 - Motorcycle</string>
     <string name="l37c_title">Lot 37 - C Spots</string>
@@ -110,16 +111,4 @@
         N+ Permit grants access to park in Longhorn Lots and spaces signed \"Any UT Permit\" weeknights
         between 5:45 p.m. and 7:30 a.m. and all day on weekends (Friday at 5:45 p.m. to Monday at
         7:30 a.m.).</string>
-</resources>
-<!--<string-array name="permit_array">-->
-<!--<item>C Permit</item>-->
-<!--<item>C+ Permit</item>-->
-<!--<item>R Permit</item>-->
-<!--<item>S Permit</item>-->
-<!--<item>M Permit</item>-->
-<!--<item>N Permit</item>-->
-<!--<item>N+ Permit</item>-->
-<!--</string-array>-->
-<!--<string name="goole_maps_key" templateMergeStrategy="preserve" translatable="false">-->
-        <!--AIzaSyB7Z4b5LbZLFrCGhuUrqPtSqo_pnjORyDU-->
-    <!--</string>-->
+</resources><!--<string-array name="permit_array">--><!--<item>C Permit</item>--><!--<item>C+ Permit</item>--><!--<item>R Permit</item>--><!--<item>S Permit</item>--><!--<item>M Permit</item>--><!--<item>N Permit</item>--><!--<item>N+ Permit</item>--><!--</string-array>--><!--<string name="goole_maps_key" templateMergeStrategy="preserve" translatable="false">--><!--AIzaSyB7Z4b5LbZLFrCGhuUrqPtSqo_pnjORyDU--><!--</string>-->

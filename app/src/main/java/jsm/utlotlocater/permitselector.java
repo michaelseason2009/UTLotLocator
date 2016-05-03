@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
@@ -36,6 +37,10 @@ public class permitselector extends AppCompatActivity {
     // switched to ints for ease of use with intents
 //    private Permit permitType;
     private int permitType;
+    //temp messagelist
+    private Button mButtonList;
+    private EditText mEntername;
+    private String username;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +59,9 @@ public class permitselector extends AppCompatActivity {
 //        mTestText = (TextView) findViewById(R.id.testText);
         mButton = (Button) findViewById(R.id.button);
 
+        mButtonList = (Button) findViewById(R.id.button2);
+        mEntername = (EditText) findViewById(R.id.editText);
+        //
         //set default permit type
         permitType = C_PERMIT;  // C permit by default
 
@@ -95,12 +103,28 @@ public class permitselector extends AppCompatActivity {
             public void onClick(View v) {
                 int selectedId = mRadioGroupPermit.getCheckedRadioButtonId();
                 mRadioButtonPermit = (RadioButton) findViewById(selectedId);
-//                mTestText.setText(mRadioButtonPermit.getText());
-                Toast.makeText(permitselector.this, mRadioButtonPermit.getText(), Toast.LENGTH_SHORT).show();
                 //go to the mapsIntent
                 Intent mapIntent = new Intent(v.getContext(), mapview.class);
                 mapIntent.putExtra("permitType", permitType);
                 startActivity(mapIntent);
+            }
+        });
+        //button for messaging boards
+        mButtonList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //get the name
+                username = mEntername.getText().toString();
+                username = mEntername.getText().toString();
+                //either say get the name or move on
+                if(username.matches("") ){
+                    Toast.makeText(getApplicationContext(), "Please enter a name", Toast.LENGTH_SHORT).show();
+                }else{
+                    Intent messageIntent = new Intent(v.getContext(), ListLotsActivity.class);
+                    messageIntent.putExtra("username", username);
+                    startActivity(messageIntent);
+                }
+
             }
         });
     }
