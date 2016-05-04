@@ -54,7 +54,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="jsm.utlotlocater.permitselector" />
         </activity>
-        <activity android:name=".ListLotsActivity"></activity>
+        <activity android:name=".ListLotsActivity" />
+        <activity android:name=".MessagingActivity"></activity>
     </application>
 
 </manifest>
