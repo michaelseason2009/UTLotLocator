@@ -11,6 +11,7 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:name="android.support.multidex.MultiDexApplication"
@@ -49,13 +50,13 @@
 
         <activity
             android:name=".mapview"
-            android:label="@string/title_activity_mapview">
+            android:label="@string/title_activity_mapview"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="jsm.utlotlocater.permitselector" />
         </activity>
-        <activity android:name=".ListLotsActivity" />
-        <activity android:name=".MessagingActivity"></activity>
+        <activity android:name=".MessagingActivity" />
     </application>
 
 </manifest>

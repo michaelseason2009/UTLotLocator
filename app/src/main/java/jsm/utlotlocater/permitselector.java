@@ -1,6 +1,7 @@
 package jsm.utlotlocater;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -28,6 +29,8 @@ public class permitselector extends AppCompatActivity {
     private static final int NPLUS_PERMIT = 7;
 
     private static final String TAG = "UTLotLocator";
+
+    private SharedPreferences mPref;
 
     private RadioButton mC, mCplus, mR, mS, mM, mN, mNplus;
     private RadioButton mRadioButtonPermit;
@@ -64,6 +67,9 @@ public class permitselector extends AppCompatActivity {
         //
         //set default permit type
         permitType = C_PERMIT;  // C permit by default
+        //fetch username or set default
+        mPref = getSharedPreferences("utll_prefs", MODE_PRIVATE);
+        username = mPref.getString("username", "utStudent");
 
         //testing for selection
         mRadioGroupPermit.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -120,9 +126,13 @@ public class permitselector extends AppCompatActivity {
                 if(username.matches("") ){
                     Toast.makeText(getApplicationContext(), "Please enter a name", Toast.LENGTH_SHORT).show();
                 }else{
-                    Intent messageIntent = new Intent(v.getContext(), ListLotsActivity.class);
-                    messageIntent.putExtra("name", username);
-                    startActivity(messageIntent);
+                    //save the username
+                    mPref = getSharedPreferences("utll_prefs", MODE_PRIVATE);
+                    SharedPreferences.Editor ed = mPref.edit();
+                    ed.putString("username", username);
+                    ed.apply();
+                    String msg = "New username: " + username;
+                    Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
                 }
 
             }

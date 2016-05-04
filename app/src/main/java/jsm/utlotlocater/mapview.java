@@ -26,7 +26,9 @@ public class mapview extends FragmentActivity implements OnMapReadyCallback, Goo
         C,Cplus, R, S, M, N, Nplus
     }
     private int currentPermit;
+    private String lotname;
     private static final String TAG = "UTLotLocator";
+    private String markerTitle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -118,181 +120,224 @@ public class mapview extends FragmentActivity implements OnMapReadyCallback, Goo
                 ImageView pic = (ImageView) v.findViewById(R.id.infoImage);
                 TextView title = (TextView) v.findViewById(R.id.infoTitle);
 
-                String markerTitle = arg0.getTitle();
+                markerTitle = arg0.getTitle();
 
                 // Setting the custom info window's image and title
                 // One for each marker possibility
                 if (markerTitle.equals(getString(R.string.l70_title))) {
                     pic.setImageResource(R.drawable.lot70);
                     title.setText(R.string.l70_title);
+                    lotname = getString(R.string.clot);
 
                 } else if (markerTitle.equals(getString(R.string.l37m_title))) {
                     pic.setImageResource(R.drawable.lot37m);
                     title.setText(R.string.l37m_title);
+                    lotname = getString(R.string.mot);
 
                 } else if (markerTitle.equals(getString(R.string.l113_title))) {
                     pic.setImageResource(R.drawable.lot113);
                     title.setText(R.string.l113_title);
+                    lotname = getString(R.string.llot);
 
                 } else if (markerTitle.equals(getString(R.string.l37c_title))) {
                     pic.setImageResource(R.drawable.lot37c);
                     title.setText(R.string.l37c_title);
+                    lotname = getString(R.string.clot);
 
                 } else if (markerTitle.equals(getString(R.string.m21st_title))) {
                     pic.setImageResource(R.drawable.m21st);
                     title.setText(R.string.m21st_title);
+                    lotname = getString(R.string.mot);
 
                 } else if (markerTitle.equals(getString(R.string.l35_title))) {
                     pic.setImageResource(R.drawable.lot35);
                     title.setText(R.string.l35_title);
+                    lotname = getString(R.string.llot);
 
                 } else if (markerTitle.equals(getString(R.string.l103_title))) {
                     pic.setImageResource(R.drawable.lot103);
                     title.setText(R.string.l103_title);
+                    lotname = getString(R.string.llot);
 
                 } else if (markerTitle.equals(getString(R.string.l104_title))) {
                     pic.setImageResource(R.drawable.lot104);
                     title.setText(R.string.l104_title);
+                    lotname = getString(R.string.llot);
 
                 } else if (markerTitle.equals(getString(R.string.l107_title))) {
                     pic.setImageResource(R.drawable.lot107);
                     title.setText(R.string.l107_title);
+                    lotname = getString(R.string.llot);
 
                 } else if (markerTitle.equals(getString(R.string.l108_title))) {
                     pic.setImageResource(R.drawable.lot108);
                     title.setText(R.string.l108_title);
+                    lotname = getString(R.string.llot);
 
                 } else if (markerTitle.equals(getString(R.string.l109_title))) {
                     pic.setImageResource(R.drawable.lot109);
                     title.setText(R.string.l109_title);
+                    lotname = getString(R.string.llot);
 
                 } else if (markerTitle.equals(getString(R.string.l110_title))) {
                     pic.setImageResource(R.drawable.lot110);
                     title.setText(R.string.l110_title);
+                    lotname = getString(R.string.llot);
 
                 } else if (markerTitle.equals(getString(R.string.l112_title))) {
                     pic.setImageResource(R.drawable.lot112);
                     title.setText(R.string.l112_title);
+                    lotname = getString(R.string.llot);
 
                 } else if (markerTitle.equals(getString(R.string.l114_title))) {
                     pic.setImageResource(R.drawable.lot114);
                     title.setText(R.string.l114_title);
+                    lotname = getString(R.string.llot);
 
                 } else if (markerTitle.equals(getString(R.string.l115_title))) {
                     pic.setImageResource(R.drawable.lot115);
                     title.setText(R.string.l115_title);
+                    lotname = getString(R.string.llot);
 
                 } else if (markerTitle.equals(getString(R.string.l116_title))) {
                     pic.setImageResource(R.drawable.lot116);
                     title.setText(R.string.l116_title);
+                    lotname = getString(R.string.llot);
 
                 } else if (markerTitle.equals(getString(R.string.l117_title))) {
                     pic.setImageResource(R.drawable.lot117);
                     title.setText(R.string.l117_title);
+                    lotname = getString(R.string.llot);
 
                 } else if (markerTitle.equals(getString(R.string.l118_title))) {
                     pic.setImageResource(R.drawable.lot118);
                     title.setText(R.string.l118_title);
+                    lotname = getString(R.string.llot);
 
                 } else if (markerTitle.equals(getString(R.string.l119_title))) {
                     pic.setImageResource(R.drawable.lot119);
                     title.setText(R.string.l119_title);
+                    lotname = getString(R.string.llot);
 
                 } else if (markerTitle.equals(getString(R.string.brg_title))) {
                     pic.setImageResource(R.drawable.brg);
                     title.setText(R.string.brg_title);
+                    lotname = getString(R.string.gbra);
 
                 } else if (markerTitle.equals(getString(R.string.ccg_title))) {
                     pic.setImageResource(R.drawable.ccg);
                     title.setText(R.string.ccg_title);
+                    lotname = getString(R.string.gconf);
 
                 } else if (markerTitle.equals(getString(R.string.gug_title))) {
                     pic.setImageResource(R.drawable.gug);
                     title.setText(R.string.gug_title);
+                    lotname = getString(R.string.gguad);
 
                 } else if (markerTitle.equals(getString(R.string.mag_title))) {
                     pic.setImageResource(R.drawable.mag);
                     title.setText(R.string.mag_title);
+                    lotname = getString(R.string.gman);
 
                 } else if (markerTitle.equals(getString(R.string.sag_title))) {
                     pic.setImageResource(R.drawable.sag);
                     title.setText(R.string.sag_title);
+                    lotname = getString(R.string.gsana);
 
                 } else if (markerTitle.equals(getString(R.string.sjg_title))) {
                     pic.setImageResource(R.drawable.sjg);
                     title.setText(R.string.sjg_title);
+                    lotname = getString(R.string.gsanj);
 
                 } else if (markerTitle.equals(getString(R.string.swg_title))) {
                     pic.setImageResource(R.drawable.swg);
                     title.setText(R.string.swg_title);
+                    lotname = getString(R.string.gswy);
 
                 } else if (markerTitle.equals(getString(R.string.trg_title))) {
                     pic.setImageResource(R.drawable.trg);
                     title.setText(R.string.trg_title);
+                    lotname = getString(R.string.gtrin);
 
                 } else if (markerTitle.equals(getString(R.string.tsg_title))) {
                     pic.setImageResource(R.drawable.tsg);
                     title.setText(R.string.tsg_title);
+                    lotname = getString(R.string.g27);
 
                 } else if (markerTitle.equals(getString(R.string.mDk_title))) {
                     pic.setImageResource(R.drawable.mdk);
                     title.setText(R.string.mDk_title);
+                    lotname = getString(R.string.mot);
 
                 } else if (markerTitle.equals(getString(R.string.mRdm_title))) {
                     pic.setImageResource(R.drawable.mrdm);
                     title.setText(R.string.mRdm_title);
+                    lotname = getString(R.string.mot);
 
                 } else if (markerTitle.equals(getString(R.string.mTr_title))) {
                     pic.setImageResource(R.drawable.mtr);
                     title.setText(R.string.mTr_title);
+                    lotname = getString(R.string.mot);
 
                 } else if (markerTitle.equals(getString(R.string.mSw_title))) {
                     pic.setImageResource(R.drawable.msw);
                     title.setText(R.string.mSw_title);
+                    lotname = getString(R.string.mot);
 
                 } else if (markerTitle.equals(getString(R.string.m27_title))) {
                     pic.setImageResource(R.drawable.m27);
                     title.setText(R.string.m27_title);
+                    lotname = getString(R.string.mot);
 
                 } else if (markerTitle.equals(getString(R.string.mWh_title))) {
                     pic.setImageResource(R.drawable.mwh);
                     title.setText(R.string.mWh_title);
+                    lotname = getString(R.string.mot);
 
                 } else if (markerTitle.equals(getString(R.string.mbur_title))) {
                     pic.setImageResource(R.drawable.mbur);
                     title.setText(R.string.mbur_title);
+                    lotname = getString(R.string.mot);
 
                 } else if (markerTitle.equals(getString(R.string.m24_title))) {
                     pic.setImageResource(R.drawable.m24);
                     title.setText(R.string.m24_title);
+                    lotname = getString(R.string.mot);
 
                 } else if (markerTitle.equals(getString(R.string.mJes_title))) {
                     pic.setImageResource(R.drawable.mjes);
                     title.setText(R.string.mJes_title);
+                    lotname = getString(R.string.mot);
 
                 } else if (markerTitle.equals(getString(R.string.mSjc_title))) {
                     pic.setImageResource(R.drawable.msjc);
                     title.setText(R.string.mSjc_title);
+                    lotname = getString(R.string.mot);
 
                 } else if (markerTitle.equals(getString(R.string.mL70S_title))) {
                     pic.setImageResource(R.drawable.ml70s);
                     title.setText(R.string.mL70S_title);
+                    lotname = getString(R.string.mot);
 
                 } else if (markerTitle.equals(getString(R.string.mL70N_title))) {
                     pic.setImageResource(R.drawable.ml70n);
                     title.setText(R.string.mL70N_title);
+                    lotname = getString(R.string.mot);
 
                 } else if (markerTitle.equals(getString(R.string.mL118_title))) {
                     pic.setImageResource(R.drawable.lot118);
                     title.setText(R.string.mL118_title);
+                    lotname = getString(R.string.mot);
 
                 } else if (markerTitle.equals(getString(R.string.m16_title))) {
                     pic.setImageResource(R.drawable.m16);
                     title.setText(R.string.m16_title);
+                    lotname = getString(R.string.mot);
 
                 } else if (markerTitle.equals(getString(R.string.mL116_title))) {
                     pic.setImageResource(R.drawable.ml116);
                     title.setText(R.string.mL116_title);
+                    lotname = getString(R.string.mot);
 
                 }
 
@@ -444,8 +489,13 @@ public class mapview extends FragmentActivity implements OnMapReadyCallback, Goo
 
     @Override
     public void onInfoWindowClick(Marker marker){
-        Toast.makeText(mapview.this, "Future location of lot info page", Toast.LENGTH_SHORT).show();
-
+//        Toast.makeText(mapview.this, "Future location of lot info page", Toast.LENGTH_SHORT).show();
+        Intent infoIntent = new Intent(mapview.this, MessagingActivity.class);
+        String mesg = "lotname = " + lotname;
+        Log.d(TAG, mesg);
+        infoIntent.putExtra("name", lotname);
+        infoIntent.putExtra("markerTitle", markerTitle);
+        startActivity(infoIntent);
     }
 
 //    @Override

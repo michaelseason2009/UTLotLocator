@@ -3,12 +3,26 @@
     <string name="action_settings">Settings</string>
     <string name="permit_selector">Select Permit</string>
     <string name="title_activity_permitselector">permit selector</string>
-    <string name="welcome">Welcome to the UT Lot Locator! Please select your permit type and press GO!</string>
+    <string name="welcome">Welcome to the UT Lot Locator! Select a Permit on the left and a username for the message boards on the right. Hit GO! when ready.</string>
     <string name="go">GO!</string>
+    <string name="create">SELECT!</string>
+    <string name="c_prompt">Select Username:</string>
+    <string name="llot">Longhorn Lot</string>
+    <string name="clot">C Permit Lot</string>
+    <string name="g27">27th Steet Garage</string>
+    <string name="gbra">Brazos Garage</string>
+    <string name="gconf">Conference Center Garage</string>
+    <string name="gguad">Guadalupe Garage</string>
+    <string name="gman">Manor Garage</string>
+    <string name="mot">Motorcycle Spots</string>
+    <string name="gsana">San Antonio Garage</string>
+    <string name="gsanj">San Jacinto Garage</string>
+    <string name="gswy">Speedway Garage</string>
+    <string name="gtrin">Trinity Garage</string>
     <string name="messagehelp">Enter Name</string>
-    <string name="l70_title">Lot 70</string>
-    <string name="l37m_title">Lot 37 - Motorcycle</string>
-    <string name="l37c_title">Lot 37 - C Spots</string>
+    <string name="l70_title">C Permit - Lot 70</string>
+    <string name="l37m_title">Motorcycle Spots - Lot 37</string>
+    <string name="l37c_title">C Permit - Lot 37</string>
     <string name="m21st_title">Motorcycle Spots - 21st</string>
     <string name="l35_title">Longhorn Lot 35</string>
     <string name="l113_title">Longhorn Lot 113</string>
@@ -111,4 +125,4 @@
         N+ Permit grants access to park in Longhorn Lots and spaces signed \"Any UT Permit\" weeknights
         between 5:45 p.m. and 7:30 a.m. and all day on weekends (Friday at 5:45 p.m. to Monday at
         7:30 a.m.).</string>
-</resources><!--<string-array name="permit_array">--><!--<item>C Permit</item>--><!--<item>C+ Permit</item>--><!--<item>R Permit</item>--><!--<item>S Permit</item>--><!--<item>M Permit</item>--><!--<item>N Permit</item>--><!--<item>N+ Permit</item>--><!--</string-array>--><!--<string name="goole_maps_key" templateMergeStrategy="preserve" translatable="false">--><!--AIzaSyB7Z4b5LbZLFrCGhuUrqPtSqo_pnjORyDU--><!--</string>-->
+</resources>

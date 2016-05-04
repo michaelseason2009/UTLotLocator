@@ -2,6 +2,7 @@ package jsm.utlotlocater;
 
 import android.app.ListActivity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.DataSetObserver;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -27,16 +28,23 @@ public class MessagingActivity extends ListActivity{
     private MessageListAdaptor mMessageListAdaptor;
     private ValueEventListener mConnectedListener;
 
+    //extra
+    private SharedPreferences mPref;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_messaging);
 
+        //extra
+        mPref = getSharedPreferences("utll_prefs", MODE_PRIVATE);
+
         Intent intent = getIntent();
         lotname = intent.getStringExtra("name");
-        username = intent.getStringExtra("username");
+//        username = intent.getStringExtra("username");
+        username = mPref.getString("username", "utStudent");
         testing = (TextView) findViewById(R.id.testing);
-        testing.setText("Lot Name:" + lotname);
+        testing.setText("Lot Name: " + lotname);
 
         mFirebaseRef = new Firebase("https://utlotlocator.firebaseio.com/").child(lotname);
 
