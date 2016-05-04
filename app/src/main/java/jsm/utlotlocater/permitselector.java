@@ -121,7 +121,7 @@ public class permitselector extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Please enter a name", Toast.LENGTH_SHORT).show();
                 }else{
                     Intent messageIntent = new Intent(v.getContext(), ListLotsActivity.class);
-                    messageIntent.putExtra("username", username);
+                    messageIntent.putExtra("name", username);
                     startActivity(messageIntent);
                 }
 
